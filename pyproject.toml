@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portfolio-sales-production-style"
+version = "1.0.0"
+description = "Portfolio-grade sales regression project"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "joblib",
+  "matplotlib",
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "seaborn",
+]
+
+[project.scripts]
+train-sales = "main:cli"
+
+[tool.setuptools]
+py-modules = ["main"]
